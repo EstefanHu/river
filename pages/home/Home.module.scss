@@ -1,31 +1,76 @@
+@import './../../styles/shared.module.scss';
+.HeroWrapper {
+    width: 100vw;
+    height: 100vh;
+    margin: 0 auto;
+    overflow-y: hidden;
+    padding: 0;
+    background-image: url("../../public/imgs/hero.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .HeroDevotion {
+        margin-top: 150vh;
+        width: 800px;
+        background-color: rgba(255, 255, 255, 0.9);
+        border-radius: 2px;
+        padding: 20px 20px;
+        // box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        -webkit-animation: slideInDevotion 0.9s ease 1s forwards;
+        -moz-animation: slideInDevotion 0.9s ease 1s forwards;
+        -o-animation: slideInDevotion 0.9s ease 1s forwards;
+        animation: slideInDevotion 0.9s ease 1s forwards;
+        h1 {
+            color: black;
+            margin-bottom: 10px;
+        }
+        h2 {
+            align-self: flex-end;
+            color: $redPrimary;
+            font-size: 1.2rem;
+            margin-right: 50px;
+        }
+    }
+}
+
 .HomeWrapper {
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
     width: 100vw;
     height: 100%;
-    background-image: url("../../public/imgs/hero.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
     .Center {
         width: 800px;
         padding-bottom: 100px;
         .Scroller {
             border-radius: 20px;
-            margin-top: 300px;
             width: inherit;
             height: fit-content;
-            background-color: white;
-            opacity: 0.9;
             padding: 40px 50px 20px;
             h1 {
+                font-size: 2rem;
                 text-align: center;
             }
             p {
                 font-size: 1.5rem;
+                text-indent: 3rem;
+                line-height: 35px;
             }
         }
+    }
+}
+
+@keyframes slideInDevotion {
+    0% {
+        margin-top: 150vh;
+    }
+    100% {
+        margin-top: 0vh;
     }
 }
