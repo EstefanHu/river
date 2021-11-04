@@ -1,4 +1,5 @@
 import React from 'react'
+import Head from 'next/head'
 
 import LandingWrapperHeader from './landingWrapperHeader'
 import LandingWrapperFooter from './landingWrapperFooter'
@@ -8,13 +9,19 @@ import styles from './LandingWrapper.module.scss'
 const LandingWrapper = ({ children }) => {
 
 	return (
-		<div className={styles.landingWrapper}>
-			<LandingWrapperHeader />
+		<>
+			<Head>
+				<title>the river</title>
+			</Head>
 
-			{children}
+			<div className={styles.landingWrapper}>
+				<LandingWrapperHeader />
 
-			<LandingWrapperFooter />
-		</div>
+				{children}
+
+				<LandingWrapperFooter />
+			</div>
+		</>
 	)
 }
 
