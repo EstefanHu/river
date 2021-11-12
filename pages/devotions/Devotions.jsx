@@ -8,9 +8,9 @@ const Devotions = () => {
 
 	return (
 		<LandingWrapper>
-			<div className={styles.Devotion}>
-				<h1>devotions</h1>
-				<h1>devotions</h1>
+			<div className={styles.Devotions}>
+				<h1>weekly devotions</h1>
+				
 			</div>
 		</LandingWrapper>
 	)

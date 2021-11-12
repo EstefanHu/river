@@ -5,17 +5,6 @@ import styles from './LandingWrapperHeader.module.scss'
 
 const isBrowser = typeof window !== `undefined`
 
-const getScrollPosition = ({ element, useWindow }) => {
-	if (!isBrowser) return { x: 0, y: 0 }
-
-	const target = element ? element.current : document.body
-	const position = target.getBoundingClientRect()
-
-	return useWindow
-		? { x: window.scrollX, y: window.scrollY }
-		: { x: position.left, y: position.top }
-}
-
 const LandingWrapperHeader = () => {
 	const [isMobile, setIsMobile] = useState(false)
 	const [isAuthed, setIsAuthed] = useState(false)
@@ -44,7 +33,13 @@ const LandingWrapperHeader = () => {
 				}
 
 				{isAuthed
-					? <></>
+					? <button
+						type="button"
+						className={styles.AuthOptions}
+						onClick={() => null}
+					>
+						
+					</button>
 					: <button
 						type="button"
 						className={styles.AuthButton}
