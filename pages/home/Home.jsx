@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import Link from 'next/link'
 import Image from 'next/image'
 
 import LandingWrapper from './../../wrappers/landingWrapper'
@@ -40,12 +41,31 @@ const Home = () => {
 							<h1>poetry</h1>
 							<h1>short stories</h1>
 						</span>
-						
+
 						<span>
-							<div className={styles.OtherWorksCard}>
-								
-							</div>
-							<div className={styles.OtherWorksCard}></div>
+							<Link href="/poetry">
+								<a>
+									<div className={styles.OtherWorksCard}>
+										<Image
+											src="/imgs/poetry.jpg"
+											alt="poetry"
+											layout="fill"
+										/>
+									</div>
+								</a>
+							</Link>
+
+							<Link href="/stories">
+								<a>
+									<div className={styles.OtherWorksCard}>
+										<Image
+											src="/imgs/shortstory.jpg"
+											alt="short stories"
+											layout="fill"
+										/>
+									</div>
+								</a>
+							</Link>
 						</span>
 					</section>
 				</div>

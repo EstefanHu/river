@@ -1,7 +1,7 @@
-import firebase from 'firebase'
+import firebase from 'firebase/app'
 
 export const addAuthErrorMessage = dispatch => message => dispatch({ type: 'ADD_AUTH_ERROR_MESSAGE', payload: message })
-export const clearAuthErrorMessage = dispatch => message => dispatch({ type: 'CLEAR_AUTH_ERROR_MESSAGE' })
+export const clearAuthErrorMessage = dispatch => () => dispatch({ type: 'CLEAR_AUTH_ERROR_MESSAGE' })
 
 export const userSignIn = dispatch => async ({ email, password }, callback) => {
     try {
