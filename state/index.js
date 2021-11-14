@@ -7,7 +7,8 @@ const getInitialState = () => ({
         authErrorMessage: '',
         isAuthing: false,
         user: null,
-    }
+    },
+    modal: { selectedModal: '' }
 })
 
 export const StateContext = createContext([getInitialState(), () => null])
