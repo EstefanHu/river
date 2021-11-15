@@ -1,13 +1,15 @@
 import React, { useState, useEffect } from 'react'
+import { useRouter } from 'next/router'
+import { useStateValue } from '../../../state'
 import Link from 'next/link'
 
 import styles from './LandingWrapperHeader.module.scss'
 
-const isBrowser = typeof window !== `undefined`
-
 const LandingWrapperHeader = () => {
 	const [isMobile, setIsMobile] = useState(false)
 	const [isAuthed, setIsAuthed] = useState(false)
+
+	const router = useRouter()
 
 	useEffect(() => {
 		setIsMobile(false)
@@ -38,12 +40,12 @@ const LandingWrapperHeader = () => {
 						className={styles.AuthOptions}
 						onClick={() => null}
 					>
-						
+
 					</button>
 					: <button
 						type="button"
 						className={styles.AuthButton}
-						onClick={() => null}
+						onClick={() => router.push('/auth')}
 					>sign in</button>
 				}
 			</span>

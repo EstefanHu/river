@@ -8,7 +8,7 @@ const Modals = ({ children }) => {
     const modalRef = useRef(null)
     const closeRef = useRef(null)
     const {
-        state: { modal: { isOpen, selectedModal } },
+        state: { modal: { selectedModal } },
         closeModal
     } = useStateValue()
 
@@ -16,7 +16,7 @@ const Modals = ({ children }) => {
     return (
         <div
             ref={modalRef}
-            className={`${styles.ModalWrapper} ${isOpen && styles.Toggled}`}
+            className={`${styles.ModalWrapper} ${selectedModal && styles.Toggled}`}
             onClick={e => { if (e.target === modalRef.current) closeModal() }}
         >
             <div className={`${styles.Modal} ${selectedModal && styles.Toggled}`}>

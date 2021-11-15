@@ -5,7 +5,6 @@ import Image from 'next/image'
 import LandingWrapper from './../../wrappers/landingWrapper'
 
 import Modal from './../../modals'
-import AuthModal from './../../modals/authModal'
 
 import styles from './Home.module.scss'
 
@@ -82,7 +81,6 @@ const Home = () => {
 			</LandingWrapper>
 
 			<Modal>
-				<AuthModal />
 			</Modal>
 		</>
 	)
