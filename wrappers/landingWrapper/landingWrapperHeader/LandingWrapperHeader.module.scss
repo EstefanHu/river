@@ -12,12 +12,7 @@
     justify-content: space-between;
     align-items: center;
     .Logo {
-        font-size: 2rem;
-        span {
-            color: $redPrimary;
-            font-size: 0.85rem;
-            text-transform: uppercase;
-        }
+        @extend .Logo;
     }
     .LinksWrapper {
         display: flex;

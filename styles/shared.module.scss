@@ -1,1 +1,9 @@
 $redPrimary: #940a0a;
+.Logo {
+    font-size: 2vw;
+    span {
+        color: $redPrimary;
+        font-size: .85vw;
+        text-transform: uppercase;
+    }
+}
