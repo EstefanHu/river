@@ -1,6 +1,7 @@
 import React from 'react'
 
 import AppWrapper from '../../wrappers/appWrapper'
+import Inbox from './../../appComponents/home/inbox'
 
 import styles from './App.module.scss'
 

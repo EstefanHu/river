@@ -11,8 +11,8 @@ const AppWrapperNavigation = () => {
                 <a><h1>home</h1></a>
             </Link>
 
-            <Link href='/app/write'>
-                <a><h1>write</h1></a>
+            <Link href='/app/inbox'>
+                <a><h1>inbox</h1></a>
             </Link>
 
             <Link href='/app/profile'>
