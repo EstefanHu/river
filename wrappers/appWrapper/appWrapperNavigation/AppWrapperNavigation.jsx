@@ -8,15 +8,15 @@ const AppWrapperNavigation = () => {
     return (
         <nav className={styles.AppWrapperNavigation}>
             <Link href='/app'>
-                <a>home</a>
+                <a><h1>home</h1></a>
             </Link>
 
             <Link href='/app/write'>
-                <a>write</a>
+                <a><h1>write</h1></a>
             </Link>
 
             <Link href='/app/profile'>
-                <a>profile</a>
+                <a><h1>profile</h1></a>
             </Link>
         </nav>
     )
