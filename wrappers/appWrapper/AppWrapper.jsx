@@ -1,7 +1,6 @@
 import React from 'react'
 import { useRouter } from 'next/router'
 
-import AppWrapperHeader from './appWrapperHeader'
 import AppWrapperNavigation from './AppWrapperNavigation'
 
 import styles from './AppWrapper.module.scss'
