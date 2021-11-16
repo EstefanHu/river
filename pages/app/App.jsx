@@ -1,19 +1,28 @@
 import React from 'react'
 
 import AppWrapper from '../../wrappers/appWrapper'
+import HomeHeader from './../../appComponents/home/homeHeader'
+import Overview from './../../appComponents/home/overview'
 import Inbox from './../../appComponents/home/inbox'
 
 import styles from './App.module.scss'
 
 const App = () => {
 
-    return (
-        <AppWrapper>
-            <div className={styles.App}>
-                <h1>home</h1>
-            </div>
-        </AppWrapper>
-    )
+	return (
+		<AppWrapper>
+			<div className={styles.App}>
+				<section className={styles.Primary}>
+					<HomeHeader />
+					<Overview />
+				</section>
+
+				<aside className={styles.Aside}>
+
+				</aside>
+			</div>
+		</AppWrapper>
+	)
 }
 
 export default App

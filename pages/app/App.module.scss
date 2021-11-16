@@ -1,2 +1,13 @@
 @import './../../styles/shared.module.scss';
-.App {}
+.App {
+    display: flex;
+    justify-content: space-between;
+    .Primary {
+        flex-grow: 1;
+        max-width: 800px;
+    }
+    .Aside {
+        flex-grow: 1;
+        min-width: 300px;
+    }
+}
