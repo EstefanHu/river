@@ -1,4 +1,5 @@
-import React from 'react'
+import React, { useEffect } from 'react'
+import { useStateValue } from '../../state'
 
 import AppWrapper from '../../wrappers/appWrapper'
 import HomeHeader from './../../appComponents/home/homeHeader'
@@ -8,6 +9,11 @@ import Inbox from './../../appComponents/home/inbox'
 import styles from './App.module.scss'
 
 const App = () => {
+	const { getRecentPosts } = useStateValue()
+
+	useEffect(() => {
+		getRecentPosts()
+	}, [])
 
 	return (
 		<AppWrapper>
