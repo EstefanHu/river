@@ -1,9 +1,10 @@
-import firebase from 'firebase/app'
+import { postsCol } from './../../config/firebaseConfiguration'
+import { getDocs } from 'firebase/firestore'
 
 export const getRecentPosts = dispatch => async page => {
 	try {
 		console.log(`Getting 'posts' at page ${page}`)
-		const posts = await firebase.firestore().collection('Posts').get()
+		const posts = await getDocs(postsCol)
 		console.log(posts)
 	} catch (ex) {
 		console.log(ex)

@@ -4,8 +4,6 @@ import Image from 'next/image'
 
 import LandingWrapper from './../../wrappers/landingWrapper'
 
-import Modal from './../../modals'
-
 import styles from './Home.module.scss'
 
 const Home = () => {
@@ -17,72 +15,67 @@ const Home = () => {
 	})
 
 	return (
-		<>
-			<LandingWrapper>
-				<div className={styles.HeroWrapper}>
-					<div className={styles.HeroDevotion}>
-						<h1>"{weeklyDevotion.hero}"</h1>
-						<h2>- {weeklyDevotion.passage}</h2>
-					</div>
+		<LandingWrapper>
+			<div className={styles.HeroWrapper}>
+				<div className={styles.HeroDevotion}>
+					<h1>"{weeklyDevotion.hero}"</h1>
+					<h2>- {weeklyDevotion.passage}</h2>
+				</div>
+			</div>
+
+			<div className={styles.HomeWrapper}>
+
+				<div className={styles.Left}>
+
 				</div>
 
-				<div className={styles.HomeWrapper}>
+				<div className={styles.Center}>
 
-					<div className={styles.Left}>
+					<section className={styles.Weekly}>
+						<h1>{weeklyDevotion.title}</h1>
+						<p>{weeklyDevotion.body}</p>
+					</section>
 
-					</div>
+					<section className={styles.OtherWorks}>
+						<span>
+							<h1>poetry</h1>
+							<h1>short stories</h1>
+						</span>
 
-					<div className={styles.Center}>
+						<span>
+							<Link href="/poetry">
+								<a>
+									<div className={styles.OtherWorksCard}>
+										<Image
+											src="/imgs/poetry.jpg"
+											alt="poetry"
+											layout="fill"
+										/>
+									</div>
+								</a>
+							</Link>
 
-						<section className={styles.Weekly}>
-							<h1>{weeklyDevotion.title}</h1>
-							<p>{weeklyDevotion.body}</p>
-						</section>
+							<Link href="/stories">
+								<a>
+									<div className={styles.OtherWorksCard}>
+										<Image
+											src="/imgs/shortstory.jpg"
+											alt="short stories"
+											layout="fill"
+										/>
+									</div>
+								</a>
+							</Link>
+						</span>
+					</section>
+				</div>
 
-						<section className={styles.OtherWorks}>
-							<span>
-								<h1>poetry</h1>
-								<h1>short stories</h1>
-							</span>
-
-							<span>
-								<Link href="/poetry">
-									<a>
-										<div className={styles.OtherWorksCard}>
-											<Image
-												src="/imgs/poetry.jpg"
-												alt="poetry"
-												layout="fill"
-											/>
-										</div>
-									</a>
-								</Link>
-
-								<Link href="/stories">
-									<a>
-										<div className={styles.OtherWorksCard}>
-											<Image
-												src="/imgs/shortstory.jpg"
-												alt="short stories"
-												layout="fill"
-											/>
-										</div>
-									</a>
-								</Link>
-							</span>
-						</section>
-					</div>
-
-					<div className={styles.Right}>
-
-					</div>
+				<div className={styles.Right}>
 
 				</div>
-			</LandingWrapper>
 
-			<Modal>
-			</Modal>
-		</>
+			</div>
+		</LandingWrapper>
 	)
 }
 

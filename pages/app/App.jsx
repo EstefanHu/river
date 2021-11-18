@@ -9,10 +9,10 @@ import Inbox from './../../appComponents/home/inbox'
 import styles from './App.module.scss'
 
 const App = () => {
-	const { getRecentPosts } = useStateValue()
+	// const { getRecentPosts } = useStateValue()
 
 	useEffect(() => {
-		getRecentPosts()
+		// getRecentPosts()
 	}, [])
 
 	return (

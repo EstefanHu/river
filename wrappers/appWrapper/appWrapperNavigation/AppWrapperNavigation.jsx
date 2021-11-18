@@ -31,7 +31,7 @@ const AppWrapperNavigation = () => {
             </Link>
 
             {/* <button
-                type="button"
+                type="button"   
                 className={styles.CloseButton}
                 onClick={() => null}
             >close</button> */}
