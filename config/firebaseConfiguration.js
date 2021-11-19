@@ -1,4 +1,4 @@
-import { initializeApp, getApps } from 'firebase/app'
+import { initializeApp } from 'firebase/app'
 import { getAuth } from 'firebase/auth'
 import { getFirestore, collection, getDocs } from 'firebase/firestore'
 
@@ -14,16 +14,18 @@ const firebaseApp = initializeApp({
 const auth = getAuth(firebaseApp)
 const db = getFirestore(firebaseApp)
 
-const postsCol = collection(db, 'Posts')
 const devotionsCol = collection(db, 'Devotions')
+const draftsCol = collection(db, 'Drafts')
 const poemsCol = collection(db, 'Poems')
+const postsCol = collection(db, 'Posts')
 const storyCol = collection(db, 'Stories')
 
 export {
     auth,
     db,
-    postsCol,
     devotionsCol,
+    draftsCol,
     poemsCol,
+    postsCol,
     storyCol,
 }

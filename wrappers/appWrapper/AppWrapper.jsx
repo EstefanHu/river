@@ -16,7 +16,7 @@ const AppWrapper = ({ children }) => {
 				<header className={styles.MainContentHeader}>
 					<button
 						type="button"
-						onClick={() => router.push('/app/write')}
+						onClick={() => window.open('/app/write')}
 					>write</button>
 				</header>
 

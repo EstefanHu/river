@@ -8,14 +8,18 @@ const initialState = () => ({
         isAuthing: false,
         user: null,
     },
+    devotion: {
+        devotionErrorMessage: '',
+        devotions: [],
+    },
+    draft: {
+        draftErrorMessage: '',
+        drafts: []
+    },
     modal: { selectedModal: '' },
     post: {
         postErrorMessage: '',
         posts: []
-    },
-    devotion: {
-        devotionErrorMessage: '',
-        devotions: [],
     },
     poetry: {
         poetryErrorMessage: '',
@@ -44,4 +48,4 @@ export const StateProvider = ({ children }) => {
     )
 }
 
-export const useStateValue = () => useContext(StateContext)
+export const useGlobalState = () => useContext(StateContext)

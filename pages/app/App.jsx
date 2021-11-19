@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import { useStateValue } from '../../state'
+import { useGlobalState } from '../../state'
 
 import AppWrapper from '../../wrappers/appWrapper'
 
@@ -10,7 +10,7 @@ import {
 import styles from './App.module.scss'
 
 const App = () => {
-	const { getRecentPosts } = useStateValue()
+	const { getRecentPosts } = useGlobalState()
 
 	useEffect(() => {
 		getRecentPosts()

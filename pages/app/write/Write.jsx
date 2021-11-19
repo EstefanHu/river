@@ -1,16 +1,21 @@
 import React from 'react'
 
-import AppWrapper from './../../../wrappers/appWrapper'
+import WriteWrapper from './../../../wrappers/writeWrapper'
+import {
+    Draft,
+    Launch
+} from './../../../appComponents/write'
 
 import styles from './Write.module.scss'
 
 const Write = () => {
     return (
-        <AppWrapper>
+        <WriteWrapper>
             <div className={styles.Write}>
                 <h1>write</h1>
+                <Launch />
             </div>
-        </AppWrapper>
+        </WriteWrapper>
     )
 }
 
