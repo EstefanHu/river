@@ -2,7 +2,7 @@ import React, { createContext, useContext, useReducer } from 'react'
 import mainReducer from './reducers'
 import mainActions from './actions'
 
-const getInitialState = () => ({
+const initialState = () => ({
     auth: {
         authErrorMessage: '',
         isAuthing: false,
@@ -11,15 +11,26 @@ const getInitialState = () => ({
     modal: { selectedModal: '' },
     post: {
         postErrorMessage: '',
-        posts: [],
+        posts: []
+    },
+    devotion: {
+        devotionErrorMessage: '',
+        devotions: [],
+    },
+    poetry: {
+        poetryErrorMessage: '',
+        poems: [],
+    },
+    story: {
+        storyErrorMessage: '',
+        stories: [],
     }
 })
 
-export const StateContext = createContext([getInitialState(), () => null])
+export const StateContext = createContext([initialState(), () => null])
 
-export const StateProvider = ({ children, _state }) => {
-    const initialState = _state ?? getInitialState()
-    const [state, dispatch] = useReducer(mainReducer, initialState)
+export const StateProvider = ({ children }) => {
+    const [state, dispatch] = useReducer(mainReducer, initialState())
 
     const actions = {}
 

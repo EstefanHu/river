@@ -1,6 +1,6 @@
 import { initializeApp, getApps } from 'firebase/app'
 import { getAuth } from 'firebase/auth'
-import { getFirestore, collection } from 'firebase/firestore'
+import { getFirestore, collection, getDocs } from 'firebase/firestore'
 
 const firebaseApp = initializeApp({
     apiKey: "AIzaSyCQAvXtW_v_MGFwDWFcFrNGZSC4S4CPz_o",
@@ -15,5 +15,15 @@ const auth = getAuth(firebaseApp)
 const db = getFirestore(firebaseApp)
 
 const postsCol = collection(db, 'Posts')
+const devotionsCol = collection(db, 'Devotions')
+const poemsCol = collection(db, 'Poems')
+const storyCol = collection(db, 'Stories')
 
-export { auth, db, postsCol }
+export {
+    auth,
+    db,
+    postsCol,
+    devotionsCol,
+    poemsCol,
+    storyCol,
+}

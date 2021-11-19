@@ -6,7 +6,7 @@ const HomeFeed = () => {
 
 	return (
 		<div className={styles.HomeFeed}>
-
+			
 		</div>
 	)
 }
