@@ -1,5 +1,8 @@
 @import './../../../styles/shared.module.scss';
 .WriteWrapperHeader {
+    background-color: white;
+    height: 58px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
     display: flex;
     justify-content: space-between;
     align-items: center;

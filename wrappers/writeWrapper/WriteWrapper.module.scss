@@ -1,2 +1,9 @@
 @import './../../styles/shared.module.scss';
-.WriteWrapper {}
+.WriteWrapper {
+    padding-top: 70px;
+    background-color: $background;
+    .Main {
+        width: 500px;
+        margin: 0 auto;
+    }
+}

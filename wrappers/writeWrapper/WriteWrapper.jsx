@@ -9,7 +9,10 @@ const WriteWrapper = ({ children }) => {
     return (
         <div className={styles.WriteWrapper}>
             <WriteWrapperHeader />
-            {children}
+
+            <section className={styles.Main}>
+                {children}
+            </section>
         </div>
     )
 }
