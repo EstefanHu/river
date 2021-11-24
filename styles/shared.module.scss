@@ -30,12 +30,13 @@ $background: rgb(250, 246, 246);
             margin-bottom: 5px;
         }
         input {
-            height: 35px;
+            height: 45px;
             outline: none;
-            font-size: 1rem;
+            font-size: 1.25rem;
             border: 2px solid lightgrey;
             border-radius: 5px;
             transition: 0.25s;
+            padding: 0 15px;
             &:hover {
                 border-color: grey;
             }
@@ -50,7 +51,7 @@ $background: rgb(250, 246, 246);
             resize: none;
             outline: none;
             padding: 10px 15px;
-            font-size: 1rem;
+            font-size: 1.25rem;
             border: 2px solid lightgrey;
             transition: 0.25s;
             &:hover {

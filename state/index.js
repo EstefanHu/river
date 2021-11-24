@@ -21,8 +21,8 @@ const initialState = () => ({
         postErrorMessage: '',
         posts: []
     },
-    poetry: {
-        poetryErrorMessage: '',
+    poem: {
+        poemErrorMessage: '',
         poems: [],
     },
     story: {
