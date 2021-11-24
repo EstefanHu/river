@@ -1,14 +1,33 @@
 import React from 'react'
+import { useRouter } from 'next/router'
 
 import styles from './Launch.module.scss'
 
 const Launch = () => {
+	const router = useRouter()
 
-    return (
-        <section className={styles.Launch}>
-            <h1>select document type</h1>
-        </section>
-    )
+	return (
+		<section className={styles.Launch}>
+			<h1>select document type</h1>
+
+			<span>
+				<button
+					type="button"
+					onClick={() => router.push('/app/write/devotional')}
+				>devotional</button>
+
+				<button
+					type="button"
+					onClick={() => router.push('/app/write/poem')}
+				>poem</button>
+
+				<button
+					type="button"
+					onClick={() => router.push('/app/write/story')}
+				>story</button>
+			</span>
+		</section>
+	)
 }
 
 export default Launch
