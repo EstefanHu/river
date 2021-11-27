@@ -6,7 +6,7 @@ import WriteWrapper from '../../../../wrappers/writeWrapper'
 import styles from './Poem.module.scss'
 
 const Poem = () => {
-	const { addNewPoem } = useGlobalState()
+	const { state: { poem: { poemErrorMessage } }, addNewPoem } = useGlobalState()
 	const [formData, setFormData] = useState({
 		title: '',
 		body: '',

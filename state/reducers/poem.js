@@ -3,7 +3,7 @@ const poemReducer = (state, { type, payload }) => {
 		case 'ADD_POEM_ERROR_MESSAGE':
 			return {
 				...state,
-				poemErrorMessage: paylaod
+				poemErrorMessage: payload
 			}
 
 		case 'CLEAR_POEM_ERROR_MESSAGE':
