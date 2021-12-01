@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { useRouter } from 'next/router'
 import { useGlobalState } from '../../../../state'
 
 import WriteWrapper from '../../../../wrappers/writeWrapper'
@@ -16,11 +17,13 @@ const Poem = () => {
 		body: '',
 	})
 
+	const router = useRouter()
+
 	const handleSubmit = async e => {
 		e.preventDefault()
-		console.log("SENDING TO DATABASE")
-		await addNewPoem(formData)
-		console.log('COMPLETED DATABASE ENTRY')
+		clearPoemErrorMessage()
+		const { status } = await addNewPoem(formData)
+		if (status === 'success') router.push('/app/write/poem/review', {}, { shallow: true })
 	}
 
 	return (
