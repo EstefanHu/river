@@ -6,21 +6,22 @@ export const clearPoemErrorMessage = dispatch => () => dispatch({ type: 'CLEAR_P
 
 export const addNewPoem = dispatch => async poem => {
 	try {
-		if (poem.title === '' || poem.body === '') {
+		const { title, body } = poem
+		if (title === '' || body === '') {
 			dispatch({ type: 'ADD_POEM_ERROR_MESSAGE', payload: 'All fields must be provided' })
 			return {
 				status: 'failure',
 				message: 'poem requires all datafields to be entered'
 			}
 		}
-		const docRef = doc(db, 'Poems', poem.title)
+		const docRef = doc(db, 'Poems', title)
 
 		const checkDoc = await getDoc(docRef)
 		if (checkDoc.exists()) {
 			dispatch({ type: 'ADD_POEM_ERROR_MESSAGE', payload: 'poem with title already exists' })
 			return {
 				status: 'failure',
-				message: `poem with title ${poem.title} already exists`
+				message: `poem with title ${title} already exists`
 			}
 		}
 		await setDoc(docRef, {
@@ -29,7 +30,7 @@ export const addNewPoem = dispatch => async poem => {
 		})
 		return {
 			status: 'success',
-			message: `poem ${poem.title} has been added to the database`
+			message: `poem ${title} has been added to the database`
 		}
 	} catch (ex) {
 		console.log(ex)

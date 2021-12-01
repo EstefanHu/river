@@ -12,13 +12,6 @@ const poemReducer = (state, { type, payload }) => {
 				poemErrorMessage: ''
 			}
 
-		case 'ADD_NEW_POEM':
-			return {
-				...state,
-				poemErrorMessage: '',
-				newestPoem: payload
-			}
-
 		default:
 			return state
 	}

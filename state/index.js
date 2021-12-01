@@ -24,7 +24,6 @@ const initialState = {
     poem: {
         poemErrorMessage: '',
         poems: [],
-        newestPoem: {}
     },
     story: {
         storyErrorMessage: '',
