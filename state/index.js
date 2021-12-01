@@ -8,9 +8,9 @@ const initialState = {
         isAuthing: false,
         user: null,
     },
-    devotion: {
-        devotionErrorMessage: '',
-        devotions: [],
+    devotional: {
+        devotionalErrorMessage: '',
+        devotionals: [],
     },
     draft: {
         draftErrorMessage: '',

@@ -1,5 +1,5 @@
 import * as authActions from './auth'
-import * as devotionActions from './devotion'
+import * as devotionalActions from './devotional'
 import * as draftActions from './draft'
 import * as modalActions from './modal'
 import * as poemActions from './poem'
@@ -8,7 +8,7 @@ import * as storyActions from './story'
 
 const mainActions = {
 	...authActions,
-	...devotionActions,
+	...devotionalActions,
 	...modalActions,
 	...poemActions,
 	...postActions,
