@@ -2,7 +2,7 @@ import React, { createContext, useContext, useReducer } from 'react'
 import mainReducer from './reducers'
 import mainActions from './actions'
 
-const initialState = () => ({
+const initialState = {
     auth: {
         authErrorMessage: '',
         isAuthing: false,
@@ -29,12 +29,12 @@ const initialState = () => ({
         storyErrorMessage: '',
         stories: [],
     }
-})
+}
 
-export const StateContext = createContext([initialState(), () => null])
+const StateContext = createContext(initialState)
 
 export const StateProvider = ({ children }) => {
-    const [state, dispatch] = useReducer(mainReducer, initialState())
+    const [state, dispatch] = useReducer(mainReducer, initialState)
 
     const actions = {}
 

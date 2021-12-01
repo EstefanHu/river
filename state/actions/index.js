@@ -6,7 +6,7 @@ import * as poemActions from './poem'
 import * as postActions from './post'
 import * as storyActions from './story'
 
-const actions = {
+const mainActions = {
 	...authActions,
 	...devotionActions,
 	...modalActions,
@@ -15,4 +15,4 @@ const actions = {
 	...storyActions
 }
 
-export default actions
+export default mainActions

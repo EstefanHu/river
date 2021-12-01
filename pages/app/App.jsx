@@ -12,8 +12,6 @@ import styles from './App.module.scss'
 const App = () => {
 	const { getRecentPosts } = useGlobalState()
 
-	console.log('DELETE ME')
-
 	useEffect(() => {
 		getRecentPosts()
 	}, [])

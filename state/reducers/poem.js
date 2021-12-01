@@ -1,6 +1,8 @@
 const poemReducer = (state, { type, payload }) => {
+
 	switch (type) {
 		case 'ADD_POEM_ERROR_MESSAGE':
+			console.log(type, payload)
 			return {
 				...state,
 				poemErrorMessage: payload

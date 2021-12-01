@@ -1,6 +1,6 @@
 import React from 'react'
 
-import WriteWrapper from './../../../wrappers/writeWrapper'
+import AppWrapper from './../../../wrappers/appWrapper'
 import {
 	Drafts,
 	Launch
@@ -10,14 +10,14 @@ import styles from './Write.module.scss'
 
 const Write = () => {
 	return (
-		<WriteWrapper>
+		<AppWrapper>
 			<div className={styles.Write}>
 				<h1>write</h1>
 				<Launch />
 
 				<Drafts />
 			</div>
-		</WriteWrapper>
+		</AppWrapper>
 	)
 }
 

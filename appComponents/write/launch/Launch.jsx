@@ -13,17 +13,17 @@ const Launch = () => {
 			<span>
 				<button
 					type="button"
-					onClick={() => router.push('/app/write/devotional')}
+					onClick={() => window.open('/app/write/devotional')}
 				>devotional</button>
 
 				<button
 					type="button"
-					onClick={() => router.push('/app/write/poem')}
+					onClick={() => window.open('/app/write/poem')}
 				>poem</button>
 
 				<button
 					type="button"
-					onClick={() => router.push('/app/write/story')}
+					onClick={() => window.open('/app/write/story')}
 				>story</button>
 			</span>
 		</section>

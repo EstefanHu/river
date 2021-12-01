@@ -6,6 +6,7 @@ export const clearPoemErrorMessage = dispatch => () => dispatch({ type: 'CLEAR_P
 
 export const addNewPoem = dispatch => async poem => {
 	try {
+		return dispatch({ type: 'ADD_POEM_ERROR_MESSAGE', payload: 'TEST ERROR' })
 		const docRef = doc(db, 'Poems', poem.title)
 		const checkDoc = await getDoc(docRef)
 		if (checkDoc.exists()) return dispatch({ type: 'ADD_POEM_ERROR_MESSAGE', payload: 'poem with title already exists' })

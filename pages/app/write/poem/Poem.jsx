@@ -6,15 +6,21 @@ import WriteWrapper from '../../../../wrappers/writeWrapper'
 import styles from './Poem.module.scss'
 
 const Poem = () => {
-	const { state: { poem: { poemErrorMessage } }, addNewPoem } = useGlobalState()
+	const { state: { poem: { poemErrorMessage } },
+		addNewPoem,
+		addPoemErrorMessage,
+		clearPoemErrorMessage
+	} = useGlobalState()
 	const [formData, setFormData] = useState({
 		title: '',
 		body: '',
 	})
 
-	const handleSubmit = e => {
+	const handleSubmit = async e => {
 		e.preventDefault()
-		addNewPoem(formData)
+		console.log("SENDING TO DATABASE")
+		await addNewPoem(formData)
+		console.log('COMPLETED DATABASE ENTRY')
 	}
 
 	return (
@@ -23,6 +29,7 @@ const Poem = () => {
 				<h1>New Poem</h1>
 
 				<form onSubmit={handleSubmit}>
+					<p>{poemErrorMessage}</p>
 					<span>
 						<label>title:</label>
 						<input

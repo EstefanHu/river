@@ -25,3 +25,5 @@ const postReducer = (state, { type, payload }) => {
 			return state
 	}
 }
+
+export default postReducer
